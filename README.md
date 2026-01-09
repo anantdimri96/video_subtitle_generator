@@ -4,9 +4,14 @@ Tired of **bad subtitles ruining your videos**? I was too. So I built **Auto Cap
 
 🔗 **Try it live:** [Click here](https://video-caption-generator-anant.streamlit.app/)
 
+https://github.com/user-attachments/assets/e8cb4e96-6990-48df-9684-8052ac079e4f
+
+
+
 ---
 
 ## 🤯 The Problem
+Tired of bad subtitles ruining your videos? So was I. That’s why I built Auto Caption Generator — a lightweight AI web app that automatically generates and burns subtitles into your videos, in perfect sync.
 
 Subtitles matter: accessibility, comprehension, global audiences.  
 But most tools are:  
