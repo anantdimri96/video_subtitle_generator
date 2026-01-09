@@ -48,7 +48,7 @@ def main():
     if uploaded_video:
         if uploaded_video.size > MAX_FILE_SIZE_BYTES:
             st.error("❌ File too large. Maximum allowed size is 20 MB.")
-        return
+            return
 
         video_path = save_uploaded_file(uploaded_video, suffix=".mp4")
         
