@@ -4,7 +4,11 @@ Tired of **bad subtitles ruining your videos**? I was too. So I built **Auto Cap
 
 🔗 **Try it live:** [Click here](https://video-caption-generator-anant.streamlit.app/)
 
-https://github.com/user-attachments/assets/e8cb4e96-6990-48df-9684-8052ac079e4f
+
+https://github.com/user-attachments/assets/e6ae4f99-eae8-4849-b301-9b31d04d91ef
+
+
+
 ---
 
 ## 🤯 The Problem
