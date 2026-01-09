@@ -5,9 +5,6 @@ Tired of **bad subtitles ruining your videos**? I was too. So I built **Auto Cap
 🔗 **Try it live:** [Click here](https://video-caption-generator-anant.streamlit.app/)
 
 https://github.com/user-attachments/assets/e8cb4e96-6990-48df-9684-8052ac079e4f
-
-
-
 ---
 
 ## 🤯 The Problem
@@ -77,20 +74,6 @@ From an **AI Product Manager perspective**, this project involved several delibe
 - Minimal UI to reduce cognitive load
 - Downloadable output for real-world usability
 
----
-
-## 📹 Product Demo (Screen Recording)
-
-> _Add a short screen recording here to demonstrate the full flow._
-
-**Suggested format:**
-- Upload video
-- Processing states
-- Captioned output playback
-
-
----
-
 ## 🛠 Tech Stack
 
 - **Frontend / App Framework:** Streamlit
@@ -104,7 +87,7 @@ From an **AI Product Manager perspective**, this project involved several delibe
 ## ⚠️ Known Limitations
 
 - CPU-only inference → slower for longer videos
-- Optimized for short-form content
+- Optimised for short-form content
 - Single-language transcription (English by default)
 - Not designed for batch processing (yet)
 
@@ -132,7 +115,7 @@ This project reflects how I approach AI products:
 - Start with a real user pain
 - Ship end-to-end
 - Respect system constraints
-- Optimize for clarity, reliability, and usability
+- Optimise for clarity, reliability, and usability
 
 ---
 
