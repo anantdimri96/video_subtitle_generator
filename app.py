@@ -26,8 +26,8 @@ from src.utils import save_uploaded_file
 
 def main():
     """Main application entry point."""
-    st.set_page_config(page_title="Subtitle Generator", layout="centered")
-    st.title("🎬 Subtitle Generator")
+    st.set_page_config(page_title="Auto Video Caption", layout="centered")
+    st.title("🎬 Auto Caption Video")
 
     ensure_directories()
 
@@ -56,28 +56,38 @@ def main():
         st.video(video_path)
         try:
             # Step 1: Extract audio
-            with st.spinner("🔊 Extracting audio..."):
+            status1 = st.status("🔊 Extracting audio...", expanded=True)
+            with status1:
                 audio_processor.extract_audio(
                     video_path,
                     str(AUDIO_OUTPUT_PATH)
                 )
+                st.write("Audio extracted successfully")
+            status1.update(label="🔊 Audio extracted", state="complete")
             
             # Step 2: Transcribe audio
-            with st.spinner("🧠 Transcribing with Whisper..."):
+            status2 = st.status("🧠 Transcribing with Whisper...", expanded=True)
+            with status2:
                 transcription_result = transcription_service.transcribe(
                     str(AUDIO_OUTPUT_PATH)
                 )
+                st.write("Transcription complete")
+            status2.update(label="🧠 Transcription complete", state="complete")
             
             # Step 3: Generate SRT file
-            with st.spinner("📝 Generating subtitles..."):
+            status3 = st.status("📝 Generating subtitles...", expanded=True)
+            with status3:
                 srt_content = transcription_service.convert_to_srt(
                     transcription_result
                 )
                 with open(SRT_OUTPUT_PATH, "w", encoding="utf-8") as f:
                     f.write(srt_content)
+                st.write("SRT file generated")
+            status3.update(label="📝 Subtitles generated", state="complete")
             
             # Step 4: Burn captions into video
-            with st.spinner("🔥 Burning subtitles into video..."):
+            status4 = st.status("🔥 Burning subtitles into video...", expanded=True)
+            with status4:
                 video_processor.burn_captions(
                     video_path,
                     str(SRT_OUTPUT_PATH),
@@ -86,8 +96,10 @@ def main():
                     audio_codec=AUDIO_CODEC,
                     mov_flags=MOV_FLAGS,
                 )
+                st.write("Subtitles burned into video")
+            status4.update(label="🔥 Subtitles burned into video", state="complete")
             
-            st.success("✅ Subtitles generated successfully!")
+            st.success("✅ All steps completed successfully!")
             
             # Display result
             st.subheader("Captioned Video")
